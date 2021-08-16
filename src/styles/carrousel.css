@@ -1,0 +1,14 @@
+/* Para fazer a implementação do scroll horizontal, foi consultada a
+documentação de W3Schools, sobre um atributo chamado overflow.
+https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp */
+
+.scroll-recomendation {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.img-recomendation {
+  width: 180px;
+}

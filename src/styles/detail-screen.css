@@ -1,0 +1,6 @@
+.start-recipe-button {
+  bottom: 0;
+  display: flex;
+  margin: 0 35% 10px;
+  position: fixed;
+}

@@ -1,0 +1,30 @@
+Nome do grupo: EM BREVE
+
+1. Trabalhar com thrads no Slack:
+=> Título: [ Atualização ] Título da atualização.
+=> Inside thread: Conteúdo a ser infomado.
+=> Informando modificações importantes que ocorreram.
+
+2. Padrão para criação de branchs:
+=> A partir da branch master, deve ser feito o que for considerado abaixo:
+=> git checkout -b main-group-33-requisito[numero-do-requisito]
+=> git push origin main-group-33-requisito[numero-do-requisito]
+
+3. As tecnologias usadas serão React com Context API e Hooks.
+
+4. Ferramentas de comunicação alternativa:
+=> Discord e Slack.
+
+5. Horário de encontros necessários:
+=> Das 14:00 às 20:00.
+
+6. Discutir as necessidades do projeto, o que tem de ser feito e o que será feito.
+=> Importante fazer um resumo do que foi feito no projeto.
+=> DM's com os membros do time e verificação do Trello.
+
+7. Dar o nosso máximo para realização do projeto.
+=> Trabalhando com metas diárias, sempre que possível.
+
+8. Por último e não menos importante, somente apenas good vibes!!!
+
+9.LINK DO PR DA MASTER: https://github.com/tryber/sd-011-project-recipes-app/pull/174
