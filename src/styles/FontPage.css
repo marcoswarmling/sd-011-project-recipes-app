@@ -1,0 +1,22 @@
+* {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 40px;    
+  background: -webkit-linear-gradient(red,orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  /* text-shadow:white 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px */
+}
+
+h3 {
+  font-size: 20px;
+  background: -webkit-linear-gradient(red,orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  /* color: white;  
+  text-shadow:#000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px */
+}

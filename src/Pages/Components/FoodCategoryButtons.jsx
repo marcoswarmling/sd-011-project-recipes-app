@@ -1,6 +1,7 @@
 import React from 'react';
 import { CategoryFoodAPI, CategoryFoodFilter } from '../../services/CategoryFoodAPI';
 import Context from '../../Context_Configs/Context';
+import '../../styles/foodCategoryButtons.css';
 
 export default function FoodCategory() {
   const numberFour = 4;
@@ -34,29 +35,33 @@ export default function FoodCategory() {
   }
 
   return (
-    <div>
-      {
-        foodCategories && foodCategories.filter((item, index) => index <= numberFour)
-          .map((category, index) => (
-            <button
-              onClick={ (e) => requestFoodsComingFromCategories(e) }
-              type="button"
-              key={ index }
-              data-testid={ `${category}-category-filter` }
-              name="category"
-              value={ category }
-            >
-              {category }
-            </button>
-          ))
-      }
-      <button
-        type="button"
-        onClick={ (e) => requestFoodsComingFromCategories(e) }
-        data-testid="All-category-filter"
-      >
-        All
-      </button>
+    <div className="container-fluid ">
+      <section className="d-flex flex-wrap justify-content-center my-2">
+        {
+          foodCategories && foodCategories.filter((item, index) => index <= numberFour)
+            .map((category, index) => (
+              <button
+                onClick={ (e) => requestFoodsComingFromCategories(e) }
+                type="button"
+                className="button col-5 mb-1 mx-1"
+                key={ index }
+                data-testid={ `${category}-category-filter` }
+                name="category"
+                value={ category }
+              >
+                {category }
+              </button>
+            ))
+        }
+        <button
+          type="button"
+          className="button col-5 mb-1 mx-1"
+          onClick={ (e) => requestFoodsComingFromCategories(e) }
+          data-testid="All-category-filter"
+        >
+          All
+        </button>
+      </section>
     </div>
   );
 }

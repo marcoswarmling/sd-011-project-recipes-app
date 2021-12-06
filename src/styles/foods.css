@@ -1,0 +1,32 @@
+.profile-icon {  
+  padding-right: 5px;
+  width: 30px;
+  background-color: white;
+  border: 1px solid black
+}
+
+.search-icon {    
+  width: 25px;
+  background-color: white;
+  border: 1px solid black
+}
+
+.search-icon-button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+}
+
+body {
+  background: #F8D4E4 !important;
+}
+
+.food-card {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);  
+}
+
+.comida-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -23,20 +23,32 @@ function SearchBar({ value }) {
   }
 
   return (
-    <div className="search-bar">
-      <label htmlFor="search-input">
-        <input
-          onChange={ (e) => setSearchParameters({ ...searchParameters,
-            searchInput: e.target.value }) }
-          id="search-input"
-          data-testid="search-input"
-          type="text"
-          placeholder="Busca Receita"
-        />
-      </label>
-      <form>
+    <div className="container-fluid">
+      <section className="row">
+        <div className="col-7">
+          <label htmlFor="search-input">
+            <input
+              onChange={ (e) => setSearchParameters({ ...searchParameters,
+                searchInput: e.target.value }) }
+              id="search-input"
+              data-testid="search-input"
+              type="text"
+              placeholder="Busca Receita"
+            />
+          </label>
+        </div>
+        <div className="col-5 pl-2">
+          <button
+            type="button"
+            data-testid="exec-search-btn"
+            onClick={ () => clickFunctions() }
+          >
+            Pesquisar
+          </button>
+        </div>
+      </section>
+      <form className="d-flex flex-column">
         <label htmlFor="ingredients">
-          Ingredientes
           <input
             onChange={ (e) => setSearchParameters({ ...searchParameters,
               searchMethod: e.target.id }) }
@@ -44,10 +56,11 @@ function SearchBar({ value }) {
             name="parameter"
             id="ingredients"
             type="radio"
+            className="mr-2"
           />
+          Ingredientes
         </label>
         <label htmlFor="name">
-          Nome
           <input
             onChange={ (e) => setSearchParameters({ ...searchParameters,
               searchMethod: e.target.id }) }
@@ -55,10 +68,11 @@ function SearchBar({ value }) {
             name="parameter"
             id="name"
             type="radio"
+            className="mr-2"
           />
+          Nome
         </label>
         <label htmlFor="first-letter">
-          Primeira Letra
           <input
             onChange={ (e) => setSearchParameters({ ...searchParameters,
               searchMethod: e.target.id }) }
@@ -66,15 +80,11 @@ function SearchBar({ value }) {
             name="parameter"
             id="first-letter"
             type="radio"
+            className="mr-2"
           />
+          Primeira Letra
         </label>
-        <button
-          type="button"
-          data-testid="exec-search-btn"
-          onClick={ () => clickFunctions() }
-        >
-          Pesquisar
-        </button>
+
       </form>
     </div>
   );

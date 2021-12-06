@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-max-depth */
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -9,6 +10,7 @@ import FooterBar from './Components/FooterBar';
 import FoodCategoryButtons from './Components/FoodCategoryButtons';
 import FoodsCards from './Components/FoodsCards';
 import FoodCategoryCards from './Components/FoodCategoryCards';
+import '../styles/foods.css';
 
 // import PropTypes from 'prop-types';
 
@@ -39,27 +41,36 @@ function Foods() {
   }
 
   return (
-    <>
-      <div>
-        <h1 data-testid="page-title">Comidas</h1>
+    <section className="pb-3">
+      <div className="container pt-3 px-3">
+        <div className="comida-header">
+          <div>
+            <h1 data-testid="page-title">comida</h1>
+          </div>
+          <section>
+            <Link to="/perfil">
+              <img
+                data-testid="profile-top-btn"
+                className="profile-icon"
+                src={ profileIcon }
+                alt="Botão que direciona para a tela de perfil"
+              />
+            </Link>
+            <button
+              onClick={ () => setShowSearch(!showSearch) }
+              type="button"
+              className="search-icon-button"
+            >
+              <img
+                data-testid="search-top-btn"
+                className="search-icon"
+                src={ searchIcon }
+                alt="Botão com imagem de uma lupa: abre uma barra de pesquisa"
+              />
+            </button>
+          </section>
+        </div>
         { showSearch && <SearchBar value={ foods } /> }
-        <Link to="/perfil">
-          <img
-            data-testid="profile-top-btn"
-            src={ profileIcon }
-            alt="Botão que direciona para a tela de perfil"
-          />
-        </Link>
-        <button
-          onClick={ () => setShowSearch(!showSearch) }
-          type="button"
-        >
-          <img
-            data-testid="search-top-btn"
-            src={ searchIcon }
-            alt="Botão com imagem de uma lupa: abre uma barra de pesquisa"
-          />
-        </button>
       </div>
       <FoodCategoryButtons />
       {console.log(renderCategory)}
@@ -68,7 +79,7 @@ function Foods() {
       }
 
       <FooterBar />
-    </>
+    </section>
   );
 }
 

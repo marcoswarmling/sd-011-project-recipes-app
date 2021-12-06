@@ -9,7 +9,7 @@ export default function FooterBar() {
   return (
     <div
       style={ { position: 'fixed', bottom: 0 } }
-      className="footer-div"
+      className="col-12 bg-white d-flex justify-content-between"
       data-testid="footer"
     >
       <Link to="/bebidas">

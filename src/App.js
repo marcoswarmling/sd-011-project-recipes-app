@@ -21,6 +21,7 @@ import SingleDrinkItem from './Pages/Components/SingleDrinkItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InprogressFood from './Pages/Components/InprogressFood';
 import InProgressDrink from './Pages/Components/InprogressDrink';
+import './styles/FontPage.css';
 
 function App() {
   return (

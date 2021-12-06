@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
-// import { useHistory } from 'react-router-dom';
-
 import { useHistory } from 'react-router-dom';
 import credentialsVerify from '../Helpers/credentialsVerify';
 import submitLocalStorage from '../Helpers/submitLocalStorage';
+import chefImage from '../Extra Contents/pngwing.com.png';
+import '../styles/login.css';
 
 function Login() {
   const history = useHistory();
@@ -25,42 +24,52 @@ function Login() {
   }, [user]);
 
   return (
-    <div>
-      <h1>Login</h1>
-      <section>
-        <label htmlFor="email">
-          <input
-            onChange={ (e) => handleSubmit(e) }
-            name="email"
-            data-testid="email-input"
-            id="email"
-            type="email"
-            placeholder="Email"
-          />
-        </label>
-        <label htmlFor="password">
-          <input
-            onChange={ (e) => handleSubmit(e) }
-            name="password"
-            data-testid="password-input"
-            id="password"
-            type="password"
-            placeholder="Senha"
-          />
-        </label>
-        {/* <Link
-          to="/comidas"
-        > */}
+    <div className="container-fluid ">
+      <img
+        className="img-fluid"
+        src={ chefImage }
+        alt="Imagem de um chefe de cozinha com garfo e faca nas mãos"
+      />
+      <h1 className="d-flex justify-content-center h1">Cook Time</h1>
+      <form className="d-flex flex-wrap justify-content-center">
+        <div className="form-group">
+          <label htmlFor="email">
+            <input
+              onChange={ (e) => handleSubmit(e) }
+              className="form-control"
+              name="email"
+              data-testid="email-input"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">
+            <input
+              onChange={ (e) => handleSubmit(e) }
+              className="form-control"
+              name="password"
+              data-testid="password-input"
+              id="password"
+              type="password"
+              placeholder="Senha"
+            />
+          </label>
+        </div>
+      </form>
+      <div className="d-flex justify-content-center">
         <button
           disabled={ disabled }
+          className={ disabled ? 'btn btn-secondary' : 'btn btn-success' }
           type="button"
           data-testid="login-submit-btn"
           onClick={ () => { submitLocalStorage(user.email); HandlerLogin(); } }
         >
           Entrar
         </button>
-        {/* </Link> */}
-      </section>
+      </div>
     </div>
   );
 }
